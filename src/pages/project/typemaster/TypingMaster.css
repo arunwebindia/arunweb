@@ -1,0 +1,177 @@
+.type-css.main-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #c6e3ffa4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.type-css .containerr {
+    width: 50%;
+    padding: 20px;
+    background-color: #72f393f1;
+    border-radius: 10px;
+}
+
+.type-css .word-box {
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: rgb(21, 25, 27);
+}
+
+.type-css .type-box textarea {
+    width: 100%;
+    min-height: 200px;
+    border: none;
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: rgb(5, 23, 44);
+    padding: 16px;
+}
+
+.type-css .right {
+    color: green;
+    font-weight: 700;
+}
+
+.type-css .wrong {
+    color: red;
+    font-weight: 700;
+}
+
+.type-css .error {
+    color: red
+}
+
+.type-css .right {
+    color: green;
+}
+
+.type-css .start-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.type-css .start-box .drop-down {
+    padding: 16px;
+}
+
+.type-css .start-box .drop-down select,
+.type-css .start-box button {
+    padding: 12px 18px;
+    border: 0px;
+    background-color: rgb(24, 104, 37);
+    outline: none;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.type-css .start-box button {
+    padding: 12px 58px;
+    cursor: pointer;
+}
+
+.type-css .timer {
+    text-align: center;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.type-css .timer span {
+    display: inline-block;
+    padding: 10px 70px;
+    border-radius: 4px;
+    background-color: rgb(255, 177, 190);
+}
+
+.type-css .modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #130e0e77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+
+.type-css .modal .message-box {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 400px;
+    max-width: 600px;
+    gap: 20px;
+}
+
+.type-css .modal .message-box .Paragraph {
+    padding: 30px 10px;
+    font-size: 14px;
+    color: rgba(38, 44, 46, 0.521);
+    line-height: 1.5;
+}
+
+.type-css .modal .message-box .Paragraph .right,
+.type-css .modal .message-box .Paragraph .wrong {
+    font-weight: 400;
+}
+
+.type-css .info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.type-css .msg {
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #ebe4e4;
+    color: #272424;
+    display: inline-block;
+    width: 49%;
+}
+
+.type-css .msg span {
+    display: inline-block;
+    padding-right: 20px;
+    font-weight: 600;
+}
+
+.type-css button {
+    padding: 10px 40px;
+    border: none;
+    background-color: green;
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+   
+    display: inline-block;
+}
+
+.type-css .btn {
+    padding: 10px;
+    text-align: end;
+    font-weight: 700;
+}
+
+@media(max-width :768px){
+    .type-css .containerr{
+        width: 95%;
+    }
+}

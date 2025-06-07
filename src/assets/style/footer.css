@@ -1,0 +1,16 @@
+.link a{
+    text-decoration: none;
+    color: #ffffff86;
+
+}
+.link a.active{
+    color: #ffffffe2;
+}
+.f-heading{
+    font-size: 40px;
+}
+.box-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

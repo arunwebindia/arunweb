@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Karla';
+    src: url(./assets/static/Karla-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla';
+}
+:root{
+    --primary-color:#1363df;
+    --primary-color-v1:#488aed;
+    --primary-version1:#00317b;
+    --text-color:#03A9F4;
+    --text_heading:#E50046;
+    --gray-version_1:#988b8b;
+    
+}
+.mycontainer{
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+hr{
+    border-top:.5px solid var(--gray-version_1);
+}
+.pointer{
+    cursor: pointer;
+}
