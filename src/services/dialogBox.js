@@ -1,7 +1,8 @@
 import Swal from "sweetalert2";
 function successAlert(message) {
   Swal.fire({
-    title: message,
+    title: "success!",
+    text:message,
     showConfirmButton: true,
     showCancelButton: false,
     confirmButtonText: "OK",
@@ -10,8 +11,10 @@ function successAlert(message) {
 }
 
 function errorAlert(message) {
+  console.log(message,'msss')
   Swal.fire({
-    title: message,
+    title: "Getting error",
+    text:message,
     showConfirmButton: true,
     showCancelButton: false,
     confirmButtonText: "OK",

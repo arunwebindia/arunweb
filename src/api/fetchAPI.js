@@ -7,6 +7,7 @@ const getAPI = async(path)=>{
         return resp.data;
     } catch (error) {
         console.log(error.message);
+        
     }
 }
 
@@ -16,6 +17,7 @@ const postAPI = async(path,data)=>{
         return resp.data;
     } catch (error) {
         console.log(error.message);
+        return error.response.data
     }
 }
 

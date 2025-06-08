@@ -156,3 +156,24 @@ main {
  padding:10px;
   object-fit: contain;
 }
+
+/* dashboard =============== */
+.auth-wrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-wrapper input{
+  width: 250px;
+}
+ .auth-wrapper .image-wrapper,.auth-wrapper .image-wrapper img{
+  width: 400px;
+  height: 100%;
+  object-fit:cover;
+  object-position: top left;
+ }
+  .auth-wrapper .card-body{
+    min-width: 400px;
+  }
