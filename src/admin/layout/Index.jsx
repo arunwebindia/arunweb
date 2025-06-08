@@ -1,7 +1,10 @@
 import React from 'react'
+// import Navbar from './navbar/Navbar'
 
 export default function Index() {
   return (
-    <div>Index</div>
+    <div>
+      {/* <Navbar/> */}
+    </div>
   )
 }

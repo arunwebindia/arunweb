@@ -7,7 +7,24 @@ import Input from "../../component/input/Input";
 import TextArea from "../../component/input/TextArea";
 import PrimaryBTN from "../../component/buttons/PrimaryBTN";
 import Button from "../../component/buttons/Button";
+import { useFormik } from "formik";
+import { errorAlert, successAlert } from "../../services/dialogBox";
+import { postAPI } from "../../api/fetchAPI";
 export default function ContactUs() {
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      phone: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+    onSubmit: async(values) => {
+      let resp = await postAPI('contact',values);
+      console.log(resp?.message)
+      resp?.status ? successAlert(resp?.message) : errorAlert(resp?.message);
+     },
+  });
   return (
     <div>
       <div className="my-container py-5">
@@ -53,7 +70,7 @@ export default function ContactUs() {
           <div className="col-md-8">
             <div class="card w-100 h-100 contact-card">
               <div class="card-body w-100">
-                <form>
+                <form onSubmit={formik.handleSubmit}>
                   <div className="row">
                     <div className="col-6">
                       <div class="mb-3">
@@ -61,10 +78,11 @@ export default function ContactUs() {
                           Full Name
                         </label>
                         <Input
+                        name="name"
                           type="text"
-                          id="name"
                           placeholder="Enter your name"
-                          required
+                          values={formik.values.name}
+                          onChange={formik.handleChange}
                         />
                       </div>
                     </div>
@@ -75,9 +93,10 @@ export default function ContactUs() {
                         </label>
                         <Input
                           type="tel"
-                          id="phone"
+                          name="phone"
                           placeholder="Enter your phone number"
-                          required
+                          values={formik.values.phone}
+                          onChange={formik.handleChange}
                         />
                       </div>
                     </div>
@@ -89,9 +108,10 @@ export default function ContactUs() {
                     </label>
                     <Input
                       type="email"
-                      id="email"
+                      name="email"
                       placeholder="Enter your email"
-                      required
+                      values={formik.values.email}
+                      onChange={formik.handleChange}
                     />
                   </div>
                   <div class="mb-3">
@@ -100,28 +120,28 @@ export default function ContactUs() {
                     </label>
                     <Input
                       type="text"
-                      id="subject"
+                      name="subject"
                       placeholder="Enter subject"
-                      required
+                      values={formik.values.subject}
+                      onChange={formik.handleChange}
                     />
-                    
                   </div>
                   <div class="mb-3">
                     <label for="message" class="form-label">
                       Message
                     </label>
                     <TextArea
-                    
                       rows="7"
+                      name="message"
                       placeholder="Type your message here..."
                       required
+                      values={formik.values.message}
+                      onChange={formik.handleChange}
                     />
-                   
                   </div>
-                  <Button
-                  type="submit" text={"Send Message"}
-                  >Send Message</Button>
-                  
+                  <Button type="submit" text={"Send Message"}>
+                    Send Message
+                  </Button>
                 </form>
               </div>
             </div>
